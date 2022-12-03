@@ -149,6 +149,12 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
+function vi-yank-pbcopy {
+    zle vi-yank
+   echo "$CUTBUFFER" | pbcopy -i
+}
+zle -N vi-yank-pbcopy
+
 #
 # Init
 #
@@ -173,12 +179,15 @@ local -A viins_keybinds
 viins_keybinds=(
   "$key_info[Backspace]" backward-delete-char
   "$key_info[Control]W"  backward-kill-word
+  "$key_info[Control]p"  up-line-or-history
+  "$key_info[Control]n"  down-line-or-history
 )
 
 # vi command mode keybinds
 local -A vicmd_keybinds
 vicmd_keybinds=(
   "$key_info[Delete]" delete-char
+  "y" vi-yank-pbcopy
 )
 
 # Special case for ControlLeft and ControlRight because they have multiple
