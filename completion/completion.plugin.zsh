@@ -20,6 +20,7 @@ fi
 
 #
 # Options
+# https://zsh.sourceforge.io/Doc/Release/Options.html#Completion
 #
 
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
@@ -33,7 +34,13 @@ unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
 
 #
 # Styles
+# https://thevaluable.dev/zsh-completion-guide-examples/
 #
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
 
 # Use caching to make completion for commands such as dpkg and apt usable.
 zstyle ':completion::complete:*' use-cache on
