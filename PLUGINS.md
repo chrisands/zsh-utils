@@ -115,8 +115,8 @@ These aliases aim to provide a way of doing simple tasks in a cross platform
 way so you don't need to remember a bunch of different commands.
 
 - `o` - open the given argument with the default application
-- `pbcopy`/`pbc` - named after the MacOS utility which stores stdin in the clipboard
-- `pbpaste`/`pbp` - named after the MacOS utility which dumps the clipboard to stdout
+- `pbcopy` - named after the MacOS utility which stores stdin in the clipboard
+- `pbpaste` - named after the MacOS utility which dumps the clipboard to stdout
 
 #### Tweaks
 

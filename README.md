@@ -43,7 +43,7 @@ specified plugins.
 source "$HOME/.antigen/antigen.zsh"
 
 # Set the default plugin repo to be zsh-utils
-antigen use belak/zsh-utils
+antigen use chrisands/zsh-utils
 
 # Specify completions we want before the completion module
 antigen bundle zsh-users/zsh-completions
