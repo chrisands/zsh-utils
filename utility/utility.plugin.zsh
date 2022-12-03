@@ -40,7 +40,7 @@ fi
 if (( $+commands[dircolors] )); then
   -coreutils-alias-setup
 else
-  alias ls="${aliases[ls]:-ls} -G"
+  alias ls="${aliases[ls]:-ls} -GF"
 fi
 
 alias grep="${aliases[grep]:-grep} --color=auto"
