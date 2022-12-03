@@ -14,6 +14,7 @@ fi
 
 #
 # Options
+# https://zsh.sourceforge.io/Doc/Release/Options.html#History
 #
 
 setopt BANG_HIST              # Treat the '!' character specially during expansion.
@@ -33,8 +34,8 @@ setopt HIST_BEEP              # Beep when accessing non-existent history.
 #
 
 HISTFILE="$_zhistfile"
-HISTSIZE=10000  # The maximum number of events to save in the internal history.
-SAVEHIST=10000  # The maximum number of events to save in the history file.
+HISTSIZE=2000  # The maximum number of events to save in the internal history.
+SAVEHIST=1000  # The maximum number of events to save in the history file.
 
 #
 # Aliases
