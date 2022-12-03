@@ -8,5 +8,8 @@ setopt INTERACTIVE_COMMENTS # Allow comments even in interactive shells.
 # Init
 #
 
-fpath+="${0:A:h}/functions"
-autoload -Uz promptinit && promptinit
+if [[ -e "$(where starship)" ]]; then
+  eval "$(starship init zsh)"
+else
+  curl -sS https://starship.rs/install.sh | sh
+fi
