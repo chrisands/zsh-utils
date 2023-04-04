@@ -8,7 +8,7 @@ setopt INTERACTIVE_COMMENTS # Allow comments even in interactive shells.
 # Init
 #
 
-if [[ -e "$(where starship)" ]]; then
+if [[ -e "$(which starship)" ]]; then
   eval "$(starship init zsh)"
 else
   curl -sS https://starship.rs/install.sh | sh
