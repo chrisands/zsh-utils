@@ -53,6 +53,12 @@ zstyle ':completion::complete:*' cache-path "$_zcompcache"
 # Initialize completion styles. Users can set their preferred completion style by
 # calling `compstyle <compstyle>` in their .zshrc, or by defining their own
 # `compstyle_<name>_setup` functions similar to the zsh prompt system.
+if [[ -n $HOMEBREW_PREFIX ]]; then
+  fpath=($HOMEBREW_PREFIX/share/zsh/site-functions(N-/) $fpath) # autoload homebrew completions
+fi
+if [[ -n $XDG_DATA_HOME ]]; then
+  fpath=($XDG_DATA_HOME/zsh/functions(N-/) $fpath) # autoload local completions
+fi
 fpath+="${0:A:h}/functions"
 autoload -Uz compstyleinit && compstyleinit
 
