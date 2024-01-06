@@ -12,4 +12,5 @@ if [[ -e "$(which starship)" ]]; then
   eval "$(starship init zsh)"
 else
   brew install starship
+  eval "$(starship init zsh)"
 fi
